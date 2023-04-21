@@ -19,3 +19,13 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+
+return queryInterface.bulkInsert('band', [{
+      name: 'Imagine Dragons',
+      genre: 'Alternative/Indie',
+      available_start_time: new Date(),
+      end_time: new Date()
+    },
+  ]);
