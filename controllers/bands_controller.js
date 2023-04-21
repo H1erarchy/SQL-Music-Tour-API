@@ -49,7 +49,8 @@ bands.get('/: name', async (req, res) => {
                             name: { [op.like]: `%$(req.query.event ? req.query.event :''}`}
                         }
                     }
-                 }
+                 },
+                 
                 ],
         })
         console.log (foundBand)
@@ -79,7 +80,7 @@ bands.post('/', async (req, res) => {
 })
 
 // UPDATE A BAND
-bands.put('/:id', async (req, res) => {
+bands.put('/:name', async (req, res) => {
     try {
         const updatedBands = await Band.update(req.body, {
             where: {
@@ -95,7 +96,7 @@ bands.put('/:id', async (req, res) => {
 })
 
 // DELETE A BAND
-bands.delete('/:id', async (req, res) => {
+bands.delete('/:name', async (req, res) => {
     try {
         const deletedBands = await Band.destroy({
             where: {
